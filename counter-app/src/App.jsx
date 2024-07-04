@@ -8,7 +8,6 @@ const addValue = () =>{
     alert("Limit of 20 count is exceed")
   }else{ 
     setCounter(counter + 1)
-  console.log(counter)
   }
 
 }
@@ -17,7 +16,6 @@ const removeValue = () =>{
     alert("can not create negative value")
   }else{
     setCounter(counter -1)
-    console.log(counter)
   }
 
 }
