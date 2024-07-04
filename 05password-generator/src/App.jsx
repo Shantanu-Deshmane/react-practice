@@ -40,7 +40,7 @@ const passwordRef =useRef(null)
   return (
     <>
 
-    <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-8 my-8 text-pink-400 bg-gray-700'>
+    <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-8 my-8 text-pink-500 bg-gray-700'>
     <h1 className=' text-2xl mb-4 my-3 text-center text-white'>Password Generator</h1>
     <div className='flex shadow rounded-lg overflow-hidden mb-4'>
 
