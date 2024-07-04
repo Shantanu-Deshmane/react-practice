@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -8,7 +6,7 @@ let [counter, setCounter] =useState(1)
 const addValue = () =>{
   if(counter >= 20){
     alert("Limit of 20 count is exceed")
-  }else{
+  }else{ 
     setCounter(counter + 1)
   console.log(counter)
   }
