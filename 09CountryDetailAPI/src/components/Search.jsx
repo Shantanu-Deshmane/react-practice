@@ -1,5 +1,4 @@
 import React from 'react'
-import CounteriesData from '../CountriesData.js'
 
 
 

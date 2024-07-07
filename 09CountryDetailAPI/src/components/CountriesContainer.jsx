@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
-import CounteriesData from '../CountriesData.js'
+import React, { useEffect, useState } from 'react'
 import CountryCard from './CountryCard.jsx'
 
 function CountriesContainer({query}) {
-   
-  // const contriesSearch = CounteriesData.filter((country)=>{
-  //   return country.name.common.toLowerCase().includes("india");
-  //   })
-  //   console.log(contriesSearch)
+  const [CounteriesData, setCountriesData] = useState([]) 
+
+  useEffect(()=>{
+
+    fetch("https://restcountries.com/v3.1/all")
+    .then((res)=>res.json())
+    .then((data)=>{
+      setCountriesData(data);
+    })
+  },[])
 
 return (
   <>
