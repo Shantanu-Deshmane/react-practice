@@ -10,7 +10,7 @@ function DropDown() {
                 <option value="America">America</option>
                 <option value="Asia">Asia</option>
                 <option value="Europe">Europe</option>
-                <option value="Canada">Canada</option>
+                <option value="Canada">Oceania</option>
             </select>
         </div>
     </>

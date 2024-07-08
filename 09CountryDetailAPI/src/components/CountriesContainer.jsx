@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import CountryCard from './CountryCard.jsx'
+ import CountryCard from './CountryCard.jsx'
 
 function CountriesContainer({query}) {
   const [CounteriesData, setCountriesData] = useState([]) 
