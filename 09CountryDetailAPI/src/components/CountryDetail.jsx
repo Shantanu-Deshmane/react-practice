@@ -4,14 +4,21 @@ function CountryDetail() {
     const countryName = new URLSearchParams(location.search).get('name')
 
     const [countryData, setCountryData] = useState({})
+
     useEffect(()=>{
         fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
         .then((res)=>res.json())
         .then(([data])=>{
             console.log(data)
             setCountryData({
-                name:data.name.common
-                
+                name:data.name.common,
+                population:data.population.toLocaleString('en-IN'),
+                region:data.region,
+                subRegion:data.subregion,
+                capital:data.capital,
+                flags:data.flags.svg,
+                nativeName:data.name.official
+
             })
         })
     
@@ -25,30 +32,30 @@ function CountryDetail() {
 
                 <div className='flex justify-center'>
                     <div className='flex flex-wrap w-[800px] mt-20 px-4  items-center'>
-                        <img className='w-[400px] my-10' src="https://flagcdn.com/wf.svg" alt="" />
+                        <img className='w-[400px] my-10' src={countryData.flags} alt="" />
                         
                         <div className='ml-20'>
-                            <h1 className='text-3xl mb-6 font-semibold'>Iceland</h1>
+                            <h1 className='text-3xl mb-6 font-semibold'>{countryData.name}</h1>
                             <div className='text-sm'>
                                 <p>
                                     <b>Native Name: </b>
-                                    <span>12412545</span>
+                                    <span>{countryData.nativeName}</span>
                                 </p>
                                 <p>
                                     <b>Population: </b>
-                                    <span>12412545</span>
+                                    <span>{countryData.population}</span>
                                 </p>
                                 <p>
                                     <b>Region: </b>
-                                    <span>12412545</span>
+                                    <span>{countryData.region}</span>
                                 </p>
                                 <p>
                                     <b>Sub Region: </b>
-                                    <span>12412545</span>
+                                    <span>{countryData.subRegion}</span>
                                 </p>
                                 <p>
                                     <b>Capital: </b>
-                                    <span>12412545</span>
+                                    <span>{countryData.capital}</span>
                                 </p>
                                 <p>
                                     <b>Top level Domain: </b>
