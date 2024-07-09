@@ -47,7 +47,7 @@ function CountryDetail() {
                                     <span>{countryData.population}</span>
                                 </p>
                                 <p className='mb-3'>
-                                    <b class>Region: </b>
+                                    <b>Region: </b>
                                     <span>{countryData.region}</span>
                                 </p>
                                 <p className='mb-3'>
