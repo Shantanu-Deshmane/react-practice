@@ -5,7 +5,7 @@ function CountryCard({name, population, flag, region, capital}) {
   return (
     <>
         <div className='w-[250px] mx-4 mt-10 text-sm bg-white rounded-lg overflow-hidden shadow-sm'>
-            <a href="/" className='inline-block'>
+            <a href={`/country?name=${name}`} className='inline-block'>
             <img src={flag} alt= {name + ' flag'}  />
             <div className='px-4 py-4'>
                 <h3 className='text-lg font-bold mb-2 '>{name}</h3>
