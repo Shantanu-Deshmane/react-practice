@@ -9,7 +9,6 @@ function CountryDetail() {
         fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
         .then((res)=>res.json())
         .then(([data])=>{
-            console.log(data)
             setCountryData({
                 name:data.name.common,
                 population:data.population.toLocaleString('en-IN'),
@@ -17,7 +16,9 @@ function CountryDetail() {
                 subRegion:data.subregion,
                 capital:data.capital,
                 flags:data.flags.svg,
-                nativeName:data.name.official
+                nativeName:Object.values(data.name.nativeName)[0].common,
+                currencies:Object.values(data.currencies)[0].name,
+                languages:Object.values(data.languages).join(", "),
 
             })
         })
@@ -58,16 +59,12 @@ function CountryDetail() {
                                     <span>{countryData.capital}</span>
                                 </p>
                                 <p>
-                                    <b>Top level Domain: </b>
-                                    <span>12412545</span>
-                                </p>
-                                <p>
                                     <b>Curencies: </b>
-                                    <span>12412545</span>
+                                    <span>{countryData.currencies}</span>
                                 </p>
                                 <p>
                                     <b>Languages: </b>
-                                    <span>12412545</span>
+                                    <span>{countryData.languages}</span>
                                 </p>
                             </div>
                         </div>
