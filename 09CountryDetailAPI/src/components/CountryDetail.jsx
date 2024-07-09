@@ -26,43 +26,43 @@ function CountryDetail() {
     },[])
     return (
         <>
-            <div >
+            <div className=''>
                 <span >
                     <i className='fa-solid fa-arrow-left mt-5 px-4  cursor-pointer bg-white mx-8 py-2 lowercase text-sm'>&nbsp; <span className='lowercase'>back</span></i>
                 </span>
 
                 <div className='flex justify-center'>
-                    <div className='flex flex-wrap w-[800px] mt-20 px-4  items-center'>
-                        <img className='w-[400px] my-10' src={countryData.flags} alt="" />
+                    <div className='flex w-[800px] mt-20 px-4  items-center'>
+                        <img className='w-[400px] my-10' src={countryData.flags} alt= {`${countryData.name} flag`} />
                         
                         <div className='ml-20'>
                             <h1 className='text-3xl mb-6 font-semibold'>{countryData.name}</h1>
                             <div className='text-sm'>
-                                <p>
+                                <p className='mb-3'>
                                     <b>Native Name: </b>
                                     <span>{countryData.nativeName}</span>
                                 </p>
-                                <p>
+                                <p className='mb-3'>
                                     <b>Population: </b>
                                     <span>{countryData.population}</span>
                                 </p>
-                                <p>
-                                    <b>Region: </b>
+                                <p className='mb-3'>
+                                    <b class>Region: </b>
                                     <span>{countryData.region}</span>
                                 </p>
-                                <p>
+                                <p className='mb-3'>
                                     <b>Sub Region: </b>
                                     <span>{countryData.subRegion}</span>
                                 </p>
-                                <p>
+                                <p className='mb-3'>
                                     <b>Capital: </b>
                                     <span>{countryData.capital}</span>
                                 </p>
-                                <p>
+                                <p className='mb-3'>
                                     <b>Curencies: </b>
                                     <span>{countryData.currencies}</span>
                                 </p>
-                                <p>
+                                <p className='mb-3'>
                                     <b>Languages: </b>
                                     <span>{countryData.languages}</span>
                                 </p>
