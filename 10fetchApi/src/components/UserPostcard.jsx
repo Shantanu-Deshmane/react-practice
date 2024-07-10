@@ -5,9 +5,9 @@ function UserPostcard(props) {
     <>
     <div className='main'>
         <img src={props.data.picture.large} alt="" />
-        <h3>{props.data.name.first}</h3>
-        <p>{props.data.phone}</p>
-        <p>{props.data.location.city}, {props.data.location.country}</p>
+        <h3> <span>Name: </span> {props.data.name.first}</h3>
+        <p> <span>Contact: </span> {props.data.phone}</p>
+        <p> <span>Address: </span>{props.data.location.city}, {props.data.location.country}</p>
     </div>
     </>
   )

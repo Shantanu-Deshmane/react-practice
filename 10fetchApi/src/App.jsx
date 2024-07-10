@@ -16,12 +16,16 @@ const [user, setUser] = useState(null)
     randomUser().then((users)=> setUser(users.results[0]))
   },[])
 
+  const refresh = () => {
+    randomUser().then((users)=> setUser(users.results[0]))
+  }
+
 
 
   return (
-      <div>
+      <div className='main' >
         {user && <UserPostcard data={user}/> }
-        
+        <button onClick={refresh} >Refresh User</button>
         {(data ? data.map((e) => <PostCard key={e.id} title={e.title} body={e.body}/> ) : <p>No Data found..</p>)}
       </div>
   )
