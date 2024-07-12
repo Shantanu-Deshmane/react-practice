@@ -13,11 +13,11 @@ const [user, setUser] = useState(null)
   }, []);
 
   useEffect(()=>{
-    randomUser().then((users)=> setUser(users.results[0]))
+    randomUser().then((users)=> setUser(users.results[0]));
   },[])
 
   const refresh = () => {
-    randomUser().then((users)=> setUser(users.results[0]))
+    randomUser().then((users)=> setUser(users.results[0]));
   }
 
 
