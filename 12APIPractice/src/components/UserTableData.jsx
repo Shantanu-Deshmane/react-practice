@@ -22,17 +22,19 @@ function UserTableData() {
                     <th>phone</th>
                     <th>gender</th>
                     <th>Department</th>
-                    <th>Ddesignation</th>
+                    <th>Designation</th>
                 </tr>
             </thead>
             <tbody>
             {userData.map((user) => (
-                <tr>
-                <td>{user.firstName}</td>
+                <tr key={user.id}>
+                <td>{user.firstName} {user.lastName}</td>
                 <td>{user.email}</td>
-                <td>{user.firstName}</td>
-                <td>{user.firstName}</td>
-                <td>{user.firstName}</td>
+                <td>{user.address.address} {user.address.city}</td>
+                <td>{user.address.address} {user.address.city}</td>
+                <td>{user.address.address} {user.address.city}</td>
+                <td>{user.company.department}</td>
+                <td>{user.company.title}</td>
                 </tr>
         ))}
             </tbody>
