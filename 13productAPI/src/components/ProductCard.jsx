@@ -12,12 +12,12 @@ function ProductCard() {
     },[])
 
   return (
-    <div className='flex flex-wrap justify-evenly'>
+    <div className='flex flex-wrap justify-evenly' >
         {productData.map((item)=>{
           return(
             <>
-              <div className='w-[550px] mx-4 mt-10 text-sm bg-white rounded-lg overflow-hidden shadow-lg flex'  >
-              <img className='w-[250px] h-[250px] p-4' src={item.image} alt="/"  />
+              <div className='w-[550px] mx-4 mt-10 text-sm bg-white rounded-lg overflow-hidden drop-shadow-md flex'  >
+              <img className=' w-[250px] h-[250px] p-4' src={item.image} alt="/"  />
 
             <div className='px-4 py-4 text-center '>
                 <h3 className='text-lg font-bold mb-2 '>{item.title}</h3>
