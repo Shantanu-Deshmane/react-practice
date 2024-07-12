@@ -8,15 +8,18 @@ function UserTableData() {
     useEffect(()=>{
         fetch("https://dummyjson.com/users")
         .then((res)=>res.json())
-        .then((data)=>setUserData(data))
+        .then((data)=>setUserData(data.users))
     },[])
+    console.log(userData)
 
 
   return (
     <div>
-        <p>{userData.map((user)=>{
-            user.name
-        })}</p>
+        <p>
+            {userData.map((users)=>(
+                <p key>{users.firstName}</p>
+            ))}
+        </p>
     </div>
   )
 }
