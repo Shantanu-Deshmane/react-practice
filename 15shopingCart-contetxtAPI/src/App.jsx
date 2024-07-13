@@ -5,7 +5,6 @@ import Item from './components/Item'
 import Cart from './components/Cart'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
