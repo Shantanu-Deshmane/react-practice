@@ -1,9 +1,11 @@
 import React, {useContext} from 'react'
-import { CartContext } from '../context/Cart.jsx'
+import { useCart } from '../context/Cart.jsx'
 
 
 function Item(props) {
-const cart = useContext(CartContext)
+// const cart = useContext(CartContext)
+const cart = useCart()
+
 
   return (
     <div>
