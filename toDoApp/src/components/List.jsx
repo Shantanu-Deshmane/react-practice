@@ -2,7 +2,8 @@ import React from 'react'
 
 function List({text,setTodoList,id}) {
     const handleDelete = ()=> {
-        setTodoList((prevList) => prevList.filter((item) => item.id !== id));
+        setTodoList((prevList) => prevList.filter((item) => item.no !== id));
+        
   };
   return (
 

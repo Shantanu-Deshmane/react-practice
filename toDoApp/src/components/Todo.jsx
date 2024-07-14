@@ -1,7 +1,7 @@
 import React, {  useRef, useState } from 'react'
 import List from './List'
 
-const id =0;
+let count = 0;
 function Todo() {
 
   const [todoList, setTodoList] = useState([]);
@@ -12,7 +12,7 @@ function Todo() {
       alert("Enter valid ToDo")
     }
     else{
-      setTodoList([...todoList, { Id:id+1, text:inpRef.current.value, display:""} ])
+      setTodoList([...todoList, { no:count++, text:inpRef.current.value, display:""} ])
       inpRef.current.value=""
     }
   }
@@ -39,7 +39,7 @@ function Todo() {
         </div>
           {
             todoList.map((item, index) => {
-              return <List key={index} setTodoList={setTodoList} text={item.text} display={item.display} id={item.Id}/>
+              return <List  setTodoList={setTodoList} text={item.text} display={item.display} id={item.no}/>
             })
           }
 
