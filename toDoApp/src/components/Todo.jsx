@@ -38,7 +38,7 @@ function Todo() {
 
         </div>
           {
-            todoList.map((item, index) => {
+            todoList.map((item) => {
               return <List  setTodoList={setTodoList} text={item.text} display={item.display} id={item.no}/>
             })
           }
