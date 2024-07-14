@@ -29,6 +29,7 @@ function Todo() {
           <input 
           ref={inpRef}  
           className='bg-transparent w-full py-2 px-4 text-orange-400 outline-none font-semibold' 
+          placeholder='Enter your task here'
           type="text"/>
 
           <button 
