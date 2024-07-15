@@ -40,3 +40,28 @@
 .read-the-docs {
   color: #888;
 }
+
+.navBar{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+ul{
+  list-style: none;
+ 
+  /* float: right; */
+  padding-right: 30px;
+}
+.navBar a{
+  color: lightcoral;
+  text-decoration: none;
+  padding: 0 30px;
+  font-size: 17px;
+  
+  font-weight: 500;
+}
+
+h1{
+  color: lightseagreen;
+  margin-top: 50px;
+}

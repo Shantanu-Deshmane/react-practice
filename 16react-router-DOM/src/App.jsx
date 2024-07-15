@@ -1,18 +1,26 @@
-import { useState } from 'react'
-import {Routes, Route} from 'react-router-dom'
 import './App.css'
+
+import {Routes, Route} from 'react-router-dom'
+
 // pages 
-import Home from './components/Home'
-import About from './components/About'
-import Contact from './components/Contact'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+
+// Components
+import NavBar from './components/NavBar'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <h1>Welcome to react router DOM</h1>
+      <div className='Container'>
+        <header>
+          <NavBar/>
+        </header>
+      </div>
+      <div className=''>
+        <h1>Welcome to react router DOM...</h1>
 
         <Routes>
           <Route path='/' element={<Home/>} />
