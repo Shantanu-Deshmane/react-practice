@@ -33,7 +33,7 @@ function Todo() {
           type="text"/>
 
           <button 
-          className='bg-orange-400 font-semibold text-white px-4'
+          className='bg-orange-400 font-semibold text-white px-4'  
           onClick={() => {add()}}>
           Add+</button>
 
