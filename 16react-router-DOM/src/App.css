@@ -65,3 +65,12 @@ h1{
   color: lightseagreen;
   margin-top: 50px;
 }
+.home{
+  color: rgb(243, 42, 75);
+}
+.contact{
+  color: rgb(251, 164, 25);
+}
+.about{
+  color: rgb(27, 45, 242);
+}
