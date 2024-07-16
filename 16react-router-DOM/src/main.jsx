@@ -28,12 +28,16 @@ import ProductDetails from './pages/ProductDetails.jsx';
        <Route path='/' element={<App/>}>
           {/* index is for Index page or starting Page */}
           <Route index element={<Home/>} />
-          <Route path='Products' element={<Products/>} />
+          <Route path='Products' element={<Products/>} >
+          {/* "id" is for dynamic routing means if there id is available then open ProductDetails page  */}
+            <Route path=':id' element={<ProductDetails/>}/>
+          </Route>
           <Route path='about' element={<About/>} />
           <Route path='contact' element={<Contact/>} >
              <Route path='contact-us' element={<ContactUs/>}/>
              <Route path='address' element={<Address/>}/>
           </Route>  
+             <Route path='*' element={<h2>Page Not Found..</h2>}/>
        </Route>
     )
   )
