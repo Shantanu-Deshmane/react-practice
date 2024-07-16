@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import CountHOC from "./CountHOC"
 
-function HoverCount() {
-    const [count, setCount] = useState(0)
+function HoverCount({count, IncreamentCount}) {
 
   return (
     <div>
         <h2>Count is: {count} </h2>
-        <button onMouseOver={()=>setCount(count+2)}>Hover here</button>
+        <button onMouseOver={IncreamentCount}>Hover here</button>
     </div>
   )
 }
 
-export default HoverCount 
+export default CountHOC(HoverCount,10) 

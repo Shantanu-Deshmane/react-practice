@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
+import CountHOC from './CountHOC'
 
-function ClickCounter() {
-    const [count, setCount] = useState(0)
+function ClickCounter({count, IncreamentCount}) {
   return (
     <div>
         <h2>Count is: {count} </h2>
-        <button onClick={()=>setCount(count+1)}>Click here</button>
+        <button onClick={IncreamentCount}>Click here</button>
     </div>
   )
 }
 
-export default ClickCounter 
+export default CountHOC(ClickCounter,20) 
