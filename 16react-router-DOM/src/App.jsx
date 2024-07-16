@@ -21,7 +21,8 @@ function App() {
       </div>
       <div className=''>
         <h1>Welcome to react router DOM...</h1>
-      <Outlet/>
+
+        <Outlet/>
         {/* OLD WAY --> <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/about' element={<About/>} />
