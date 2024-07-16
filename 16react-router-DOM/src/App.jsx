@@ -1,11 +1,11 @@
 import './App.css'
 
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, Outlet} from 'react-router-dom'
 
-// pages 
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
+// // pages "OLD WAY --> "
+// import Home from './pages/Home'
+// import About from './pages/About'
+// import Contact from './pages/Contact'
 
 // Components
 import NavBar from './components/NavBar'
@@ -21,13 +21,12 @@ function App() {
       </div>
       <div className=''>
         <h1>Welcome to react router DOM...</h1>
-
-        <Routes>
+      <Outlet/>
+        {/* OLD WAY --> <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/about' element={<About/>} />
           <Route path='/contact' element={<Contact/>} />  
-          
-        </Routes>
+        </Routes> */}
       </div>
     </>
   )
