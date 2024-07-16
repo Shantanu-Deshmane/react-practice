@@ -2,13 +2,14 @@ import React from 'react'
 import { Link, Outlet } from 'react-router-dom';
 
 function Products() {
-  let data = ['123', '456', '145','456', '4545']
+  let data = ['123', '456', '145','4569', '4545']
   return (
     <div>
 
       {data.map((id) => (
-        
+        <div key={id}>
           <Link to={id} style={{ marginRight: "15px", color: "Violet" }}>Product: {id}</Link>
+        </div>
       ))
       }
 
