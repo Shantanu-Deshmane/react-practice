@@ -16,6 +16,8 @@ import {  createBrowserRouter,
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import ContactUs from './components/ContactUs.jsx';
+import Address from './components/Address.jsx';
 
 
 
@@ -25,7 +27,10 @@ import Contact from './pages/Contact'
           {/* index is for Index page or starting Page */}
           <Route index element={<Home/>} />
           <Route path='about' element={<About/>} />
-          <Route path='contact' element={<Contact/>} />  
+          <Route path='contact' element={<Contact/>} >
+             <Route path='contact-us' element={<ContactUs/>}/>
+             <Route path='address' element={<Address/>}/>
+          </Route>  
        </Route>
     )
   )
