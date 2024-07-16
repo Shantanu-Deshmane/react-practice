@@ -18,6 +18,8 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import ContactUs from './components/ContactUs.jsx';
 import Address from './components/Address.jsx';
+import Products from './pages/Products.jsx';
+import ProductDetails from './pages/ProductDetails.jsx';
 
 
 
@@ -26,6 +28,7 @@ import Address from './components/Address.jsx';
        <Route path='/' element={<App/>}>
           {/* index is for Index page or starting Page */}
           <Route index element={<Home/>} />
+          <Route path='Products' element={<Products/>} />
           <Route path='about' element={<About/>} />
           <Route path='contact' element={<Contact/>} >
              <Route path='contact-us' element={<ContactUs/>}/>
