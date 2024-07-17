@@ -7,7 +7,7 @@ function App() {
   return (
     <>
        <Name name = "Sagar"/> 
-       <Result marks = {80}/>
+       <Result marks = {70} subject="Biology"/>
     </>
   )
 }

@@ -1,6 +1,7 @@
 import React from "react";
 
 const Name = ({name}) => {
+
     console.log("Inside Name")
     return(
         <>
@@ -8,4 +9,5 @@ const Name = ({name}) => {
         </>
     )
 }
+// export default Name;
 export default React.memo(Name);
