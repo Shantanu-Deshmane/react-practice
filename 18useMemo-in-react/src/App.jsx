@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-       <Name name = "Shantanu"/> 
+       <Name name = "Sagar"/> 
        <Result marks = {80}/>
     </>
   )

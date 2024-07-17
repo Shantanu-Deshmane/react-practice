@@ -1,4 +1,4 @@
-
+import React from "react";
 const Result = ({marks}) => {
     console.log("Inside Result")
     return(
@@ -7,4 +7,4 @@ const Result = ({marks}) => {
         </>
     )
 }
-export default Result;
+export default React.memo(Result);
