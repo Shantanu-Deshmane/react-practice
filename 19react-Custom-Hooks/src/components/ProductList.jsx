@@ -1,24 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import ProductCard from './ProductCard';
+import {useProducts} from '../hooks/useProducts'
+
 
 function ProductList() {
-
-    const [product, setProduct] = useState([]);
-
-    useEffect(()=>{
-        getProductData();
-    },[]);
-
-    const getProductData = async () =>{
-        const promise = await fetch('https://fakestoreapi.com/products')
-        const data = await promise.json();
-        setProduct(data);
-    }
+  const {product} = useProducts()
 
   return (
     <>
+      
+       <div className='mainCard'>
        {
-        product.map(product => <div> {product.title} </div>)
+        product.map(product => <ProductCard key={product.id} title={product.title} imageURL={product.image} price={product.price}/>)
        } 
+       </div>
     </>    
   )
 }
