@@ -10,4 +10,4 @@ function ClickCounter({count, IncreamentCount}) {
   )
 }
 
-export default CountHOC(ClickCounter,20) 
+export default CountHOC(ClickCounter,20 ) 
