@@ -1,6 +1,7 @@
 #root {
   padding: 2rem;
   text-align: center;
+  font-family: sans-serif;
 }
 
 img{
@@ -22,4 +23,27 @@ img{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.btns{
+  width: 100%;
+}
+.btns button{
+  margin: 0 10px;
+  outline: none;
+}
+.btn1{
+  background-color: rgb(37 99 235 );
+  color: white;
+  border: 0;
+  padding: 0.6rem 2rem;
+}
+.btn2{
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.732);
+  padding: 0.6rem 2rem;
+}
+.price{
+  font-size: 20px;
+  color: rgba(37, 100, 235, 0.729);
+  font-weight: 500;
 }

@@ -3,6 +3,7 @@ import { useProducts } from '../hooks/useProducts'
 
 
 function ProductList() {
+  // use of custom hook
   const { product } = useProducts()
 
   return (
