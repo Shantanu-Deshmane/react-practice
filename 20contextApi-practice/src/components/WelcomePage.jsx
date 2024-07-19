@@ -9,7 +9,7 @@ function WelcomePage() {
             <Consumer>
                 {(value) =>(
                     <h2>
-                        Name:{value.name}
+                        Name: {value.name}
                     </h2>
                 )}
             </Consumer>
