@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import ToDoItem from './ToDoItem';
 
 
-let count = 0;;
+let count = 0;
 
 function ToDo() {
   const [toDo, setTodo] = useState([]);
@@ -18,18 +18,20 @@ function ToDo() {
       localStorage.setItem("toDo_count",count)
     }
   }
-  
-useEffect (()=>{
-    setTodo(JSON.parse(localStorage.getItem("toDo")))
-    count = localStorage.getItem("toDo_count");
-},[])
-
   useEffect(() => {
     setTimeout(() => {
       console.log(toDo)
       localStorage.setItem("toDo",JSON.stringify(toDo))
     }, 100);
   }, [toDo])
+
+
+useEffect (()=>{
+    setTodo(JSON.parse(localStorage.getItem("toDo")))
+    count = localStorage.getItem("toDo_count");
+},[])
+
+  
 
 
   return (
