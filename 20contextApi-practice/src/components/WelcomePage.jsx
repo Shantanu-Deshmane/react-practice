@@ -4,7 +4,7 @@ import { Consumer } from './Context'
 function WelcomePage() {
   return (
     <div>
-        <h1>Welcome user : </h1>
+        <h1>Welcome,</h1>
         
             <Consumer>
                 {(value) =>(

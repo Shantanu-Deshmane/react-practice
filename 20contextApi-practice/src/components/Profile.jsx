@@ -3,8 +3,8 @@ import { Consumer } from './Context'
 
 function Profile() {
   return (
-    <div>
-        <h1>USER PROFILE</h1>
+    <div style={{textAlign:"center", marginTop:'50px'}}>
+        <b style={{textDecoration:'underline'}}>USER PROFILE</b>
         <Consumer>
             {
                 (value) => (
