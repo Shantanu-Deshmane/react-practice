@@ -16,12 +16,13 @@ function App() {
   },[])
   return (
     <>
-      <div>
+      <div className='main_container'>
       <h1>Weather Application</h1>
+      <div style={{display:"flex", justifyContent:"center"}}>
       <Input/>
-      <Button onClick = {weather.fetchData} value='Search'/>
+      <Button onClick = {weather.fetchData} value='Search' />
+      </div>
       <Card/>
-      <Button value={'Refresh'}/>
       </div>
     </>
   )
