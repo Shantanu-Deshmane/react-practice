@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { NavLink } from "react-router-dom";
+import Navbar from './Navbar';
 function ProductsList() {
     const [products, setProducts] = useState([])
 
@@ -12,9 +13,8 @@ function ProductsList() {
 
     return (
         <div >
-            <button style={{ backgroundColor: "Black", padding: "5px 30px" }}>
-                <NavLink style={{ color: "white", textDecoration: "none" }} to={'/'}>Back</NavLink>
-            </button>
+            <Navbar/>
+            
             {
                 products.map((item) => (
                     <div style={{textAlign:"center", padding:'10px', boxShadow:'rgba(0, 0, 0, 0.16) 0px 1px 4px',maxWidth:'500px', margin:'20px 0'}} key={item.id}>

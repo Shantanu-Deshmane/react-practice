@@ -1,14 +1,14 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
-
+let style ={paddingRight:"20px", textDecoration:'none', color:'#fff'}
 function Navbar() {
   return (
-    <div>
-        <ul>
-            <NavLink to={'/'}>Home</NavLink>
-            <NavLink to={'/about'}>About</NavLink>
-            <NavLink to={'/contact'}>Contact</NavLink>
-            <NavLink to={'/productList'}>ProductList</NavLink>
+    <div style={{display:'flex', justifyContent:'center',backgroundColor:"gray"}}>
+        <ul >
+            <NavLink style={(style)} to={'/'}>Home</NavLink>
+            <NavLink style={(style)} to={'/about'}>About</NavLink>
+            <NavLink style={(style)} to={'/contact'}>Contact</NavLink>
+            <NavLink style={(style)} to={'/productList'}>Products</NavLink>
         </ul>
     </div>
   )
