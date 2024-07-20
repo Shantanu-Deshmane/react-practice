@@ -29,5 +29,9 @@ button{
     color: white;
     border: 0;
     cursor: pointer;
-
+}
+.err{
+    color: red;
+    text-align: left;
+    padding-left: 15px;
 }
