@@ -7,6 +7,7 @@ import About from './components/About.jsx';
 import Contact from './components/Contact.jsx';
 import Email from './components/Email.jsx';
 import Phone from './components/Phone.jsx';
+import CallUsername from './components/CallUsername.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -16,8 +17,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/about' element={<About/>}/>
         <Route path='contact' element={<Contact/>}>
           <Route path='email' element={ <Email/> }/>
-          <Route path='phone' element={ <Phone/> }/>
+          <Route path='phone' element={ <Phone/>}/>
         </Route>
+        
+        {/* Dynamic Routing */}
+        <Route path='/user/:userName' element={<CallUsername/>}/>
       </Routes>
       </BrowserRouter>
   </React.StrictMode>,
