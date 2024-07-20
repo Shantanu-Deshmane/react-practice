@@ -8,9 +8,9 @@ function Contact() {
       <Navbar/>
       <h1>Contact Us</h1>
       <button> <NavLink to={'phone'}>Contact</NavLink> </button>
-      <button> <NavLink to={'email'}>Email</NavLink> </button>
-      <NavLink to={'/'}>BACK</NavLink>
+      <button> <NavLink to={'email'}>Email</NavLink> </button><br />
       <Outlet />
+      <NavLink to={'/'}>BACK</NavLink>
     </div>
   )
 }

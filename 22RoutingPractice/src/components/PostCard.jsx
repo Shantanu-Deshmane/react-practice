@@ -5,7 +5,6 @@ import { useParams, NavLink } from "react-router-dom";
 import Navbar from './Navbar';
 function PostCard() {
     let params = useParams()
-    console.log(params)
 
     const [itemData, setItemData] = useState(null)
 
@@ -19,7 +18,7 @@ function PostCard() {
         return (
             <>
             <Navbar/>
-            <button style={{ backgroundColor: "Black", padding: "5px 30px" }}>
+            <button style={{ backgroundColor: "Black", padding: "5px 30px", marginTop:"20px" }}>
                 <NavLink style={{ color: "white", textDecoration: "none" }} to={'/productList'}>Back</NavLink>
             </button>
 
