@@ -13,7 +13,7 @@ function PostCard() {
             .then((response) => response.json())
             .then((data) => setItemData(data))
         }, [])
-        if(itemData === null) return <h2>loading....</h2>
+        if(itemData === null) return <h2>Loading....</h2>
         
         return (
             <>
