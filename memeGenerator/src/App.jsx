@@ -7,8 +7,8 @@ function App() {
 
   return (
     <>
-    <div>
-      <p className='text-4xl font-bold p-10 text-center'>Meme Generator</p>
+    <div className="w-full mb-10 bg-slate-100">
+      <p className='text-4xl font-bold py-8 text-center'>Meme Generator</p>
     </div>
       
       <Routes>

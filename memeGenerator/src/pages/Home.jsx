@@ -9,7 +9,7 @@ function Home() {
     }, [])
 
   return (
-    <div className='flex flex-wrap justify-evenly'>
+    <div className='flex flex-wrap justify-evenly '>
         {
           memesData.map((data) => (
             <Card  image ={data.url} title={data.name}/>
