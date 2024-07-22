@@ -1,17 +1,18 @@
 import React from 'react'
 import { useState } from 'react'
-import Header from './Header'
 import Search from './Search'
 import DropDown from './DropDown'
 import CountriesContainer from './CountriesContainer'
+import { useOutletContext } from 'react-router-dom'
 
 
 function Home() {
+  const [dark] = useOutletContext();
   const [query, setQuery] = useState("")
 
   return (
-    <div>
-    <div className=' flex justify-between mt-10 px-14'>
+    <div className={dark ? 'dark' : ''}>
+    <div className=' flex justify-between pt-10 px-14'>
     <Search setQuery={setQuery} />
     <DropDown/>
     </div>

@@ -1,0 +1,47 @@
+.dark {
+    /* Global styles */
+    background-color: #212121; 
+    color: #fff; 
+  
+ 
+  
+    /* Card component styles */
+    .card {
+      background-color: #333;
+      border: 1px solid #444;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  
+    .card:hover {
+      background-color: #444;
+    }
+  
+    /* Search component styles */
+    .search-input {
+      background-color: #333;
+      border: 1px solid #444;
+      color: #fff;
+    }
+  
+    /* Dropdown component styles */
+    .region {
+      background-color: #333;
+    }
+  
+    .card .p {
+      background-color: #444;
+      border: 1px solid #555;
+    }
+
+  }
+
+  .header-dark{
+    background:#212121;
+    color: #fff;
+    border-bottom: 1px solid #333;
+
+  }
+
+
+
+  

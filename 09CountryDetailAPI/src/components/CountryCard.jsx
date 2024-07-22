@@ -5,7 +5,7 @@ function CountryCard({name, population, flag, region, capital}) {
     
   return (
     <>
-        <div className='w-[250px] mx-4 mt-10 text-sm bg-white rounded-lg overflow-hidden shadow-sm'>
+        <div className='card w-[250px] mx-4 mt-10 text-sm rounded-lg overflow-hidden shadow-lg'>
           {/* use Link component to chamge page without loading the page  or to restrict the loading of page*/}
             <Link to={`/country?name=${name}`} className='inline-block'>
             <img src={flag} alt= {name + ' flag'}  />

@@ -4,8 +4,8 @@ function DropDown() {
   return (
     <>
         <div>
-            <select className='px-10 text-sm py-2 outline-none shadow-sm  rounded-md'>
-                <option value="" hidden>Filter By region</option>
+            <select className='region px-10 text-sm py-2 outline-none shadow-sm rounded-md'>
+                <option  value="" hidden>Filter By region</option>
                 <option value="Africa">Africa</option>
                 <option value="America">America</option>
                 <option value="Asia">Asia</option>

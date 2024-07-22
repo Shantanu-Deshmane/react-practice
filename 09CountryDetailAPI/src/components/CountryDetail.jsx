@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import CountryDetailShimmer from './CountryDetailShimmer';
-import CardShimmerEffect from './CardShimmerEffect';
+import { useOutletContext } from 'react-router-dom';
 
 function CountryDetail() {
     const countryName = new URLSearchParams(location.search).get('name')
@@ -26,19 +26,20 @@ function CountryDetail() {
             })
         })
     },[])
+    const [dark] = useOutletContext();
     
     
     return (
         <>
-            <div className=''>
+            <div className={`${dark ? "dark" : ""} h-[90vh]`}>
                 <button onClick={() => history.back()} >
-                    <i className='fa-solid fa-arrow-left mt-5 px-4  cursor-pointer bg-white mx-8 py-2 lowercase text-sm'>&nbsp; <span className='lowercase'>back</span></i>
+                    <i className='card fa-solid fa-arrow-left  mt-5 px-4  cursor-pointer mx-8 py-2 lowercase text-sm'>&nbsp; <span className='lowercase'>back</span></i>
                 </button>
                 {countryData.length === 0 ? (<CountryDetailShimmer/>
             ) : (
 
-                <div className='flex justify-center'>
-                    <div className='flex w-[800px] mt-20 px-4  items-center'>
+                <div className='flex justify-center '>
+                    <div className='card flex w-[800px] shadow-lg mt-20 px-4  items-center'>
                         <img className='w-[400px] my-10' src={countryData.flags} alt= {`${countryData.name} flag`} />
                         
                         <div className='ml-20'>
