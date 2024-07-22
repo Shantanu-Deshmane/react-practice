@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
  import CountryCard from './CountryCard.jsx'
+import CardShimmerEffect from './CardShimmerEffect.jsx'
 
 function CountriesContainer({query}) {
   const [CounteriesData, setCountriesData] = useState([]) 
@@ -13,21 +14,27 @@ function CountriesContainer({query}) {
     })
   },[])
 
+  
 return (
   <>
-  <div className='flex flex-wrap justify-evenly'>
-    {CounteriesData.filter(country => country.name.common.toLowerCase().includes(query)).map((country)=>{
+  
+    {!CounteriesData.length ? (<CardShimmerEffect/>
+    ) : (<div className='flex flex-wrap justify-evenly'>
+      {CounteriesData.filter(country => country.name.common.toLowerCase().includes(query)).map((country)=>{
+  
+      return <CountryCard 
+        key={country.name.common}
+        name={country.name.common} 
+        population={country.population} 
+        flag={country.flags.svg} 
+        region={country.region} 
+        capital={country.capital}  
+      />
+    })}
+    </div>)
 
-    return <CountryCard 
-      key={country.name.common}
-      name={country.name.common} 
-      population={country.population} 
-      flag={country.flags.svg} 
-      region={country.region} 
-      capital={country.capital}  
-    />
-  })}
-  </div>
+    }
+  
   </>
   )
 }
