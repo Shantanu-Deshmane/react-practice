@@ -10,7 +10,6 @@ useEffect(() => {
   .then((res) => res.json())
   .then((data) => setProductData(data))
 },[])
-console.log(productData.map((item) => item.price))
 
   return (
     <>
