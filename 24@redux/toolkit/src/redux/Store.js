@@ -6,5 +6,5 @@ export const Store = configureStore({
         cart : cartReducer,
         
     },
-    // devTools: true
+    devTools: true
 });
