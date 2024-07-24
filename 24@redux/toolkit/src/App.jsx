@@ -5,20 +5,20 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [productData, setProductData] = useState([])
-useEffect(() => {
-  fetch('https://fakestoreapi.com/products')
-  .then((res) => res.json())
-  .then((data) => setProductData(data))
-},[])
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products')
+      .then((res) => res.json())
+      .then((data) => setProductData(data))
+  }, [])
 
   return (
     <>
-            <Cart />
+      <Cart />
 
-      <div style={{display:"flex",flexWrap:"wrap", justifyContent:"space-evenly"}}>
-        <Products data = {productData} />
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" }}>
+        <Products data={productData} />
       </div>
-      
+
     </>
   )
 }

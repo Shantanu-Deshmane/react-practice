@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useDispatch } from "react-redux";
 import { addItem } from "../redux/CartSlice";
 
 function Products({data}) {
     const dispatch = useDispatch()
+   
 
     return (
         <>
@@ -16,7 +17,7 @@ function Products({data}) {
                         <h5 className="card-title">{item.title}</h5>
                         <h5 className="text-danger">{item.price}$</h5>
                         <p className="card-text">{item.description.substring(0,90)}</p>
-                        <button onClick={e => dispatch(addItem({name:item.title, price:item.price}))} className="btn btn-primary">Add to cart</button>
+                        <button onClick={e => dispatch(addItem({name:item.title, price:item.price, imageURL:item.image}))} className="btn btn-primary">Add to cart</button>
                     </div>
                 </div>
                 ))
