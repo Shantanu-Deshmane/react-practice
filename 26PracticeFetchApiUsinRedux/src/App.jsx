@@ -15,6 +15,17 @@ function App() {
     <>
       <div>
         <button onClick={e => dispatch(FetchUserData())}>Get User</button>
+        
+        {
+          state.data?.map((e) => (
+            <div key={e.id}>
+              <p><b>UserName: </b>{e.name}</p>
+              <p>{e.email}</p>
+              <p>{e.phone}</p>
+              <p>{e.company.name}</p>
+            </div>
+          ))
+        }
 
       </div>
     </>
