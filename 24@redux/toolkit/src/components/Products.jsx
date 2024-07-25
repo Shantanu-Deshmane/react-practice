@@ -8,7 +8,7 @@ function Products({data}) {
 
     return (
         <>
-
+ 
             {
                 data.map((item) => (
                     <div key={item.id} className="card shadow-sm m-2" style={{width: "18rem"}}>
