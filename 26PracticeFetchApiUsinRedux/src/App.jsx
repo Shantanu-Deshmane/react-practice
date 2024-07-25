@@ -7,7 +7,7 @@ function App() {
   const state = useSelector(state => state.userData)
   console.log(state);
 
-  if(state.isLoading){
+  if (state.isLoading) {
     return <h1>LOADING....</h1>
   }
 
@@ -15,7 +15,7 @@ function App() {
     <>
       <div>
         <button onClick={e => dispatch(FetchUserData())}>Get User</button>
-        
+
         {
           state.data?.map((e) => (
             <div key={e.id}>

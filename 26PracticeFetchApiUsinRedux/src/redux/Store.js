@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import  UserDataReducer  from "../redux/UserDataSlice";
+import UserDataReducer from "../redux/UserDataSlice";
 
-export const Store = configureStore ({
+export const Store = configureStore({
     reducer: {
-        userData : UserDataReducer,
+        userData: UserDataReducer,
     }
 });

@@ -1,21 +1,21 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const FetchUserData = createAsyncThunk("FetchUserData", async () => {
-    const response = await fetch ('https://jsonplaceholder.typicode.com/users');
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
     return response.json();
 })
 
 const UserDataSlice = createSlice({
-    name : "userData",
-    initialState:{
+    name: "userData",
+    initialState: {
         data: null,
-        isLoading : false,
-        isError : false,
+        isLoading: false,
+        isError: false,
     },
 
     extraReducers: (builder) => {
-        builder.addCase(FetchUserData.pending, (state,action) => {
-            state.isLoading = true ;
+        builder.addCase(FetchUserData.pending, (state, action) => {
+            state.isLoading = true;
         })
 
         builder.addCase(FetchUserData.fulfilled, (state, action) => {
