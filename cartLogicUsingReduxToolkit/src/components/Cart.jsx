@@ -4,8 +4,8 @@ import { removeItem } from "../redux/CartSlice";
 
 function Cart() {
     const dispatch = useDispatch();
-    const state = useSelector(state => state.products)
-    console.log(state)
+    const state = useSelector(state => state.products.items)
+    // console.log(state)
     const totalPrice = state.reduce((a, b) => a + b.price, 0)
     
   return (
@@ -13,17 +13,19 @@ function Cart() {
         <h3>{`Products in Cart are: ${state.length}`}</h3>
         <b>{`Total : Rs ${totalPrice} /-`}</b>
 
-        {
+       <div className='container'>
+       {
             state.map((e, i) => (
-                <div key={i} style={{width:"150px", backgroundColor:"white", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", padding: "50px 10px", marginBottom:"5px"}}>
+                    <div key={i} style={{width:"150px", backgroundColor:"white", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", padding: "50px 10px", margin:"30px 10px"}}>
                     <p className='title'>{e.name}</p>
                     <p>Rs. {e.price}</p>
-                    <button onClick={(e) => dispatch(removeItem())}  className='remove-btn'>Remove</button>
+                    <button onClick={() => dispatch(removeItem(e.id))}  className='remove-btn'>Remove</button>
 
                 </div>
             ))
         }
 
+       </div>
             <div>
         </div>
     </div>

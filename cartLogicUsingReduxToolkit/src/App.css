@@ -32,3 +32,21 @@ h1{
   font-size: 19px;
   font-weight: bold;
 }
+.cart{
+  float: right;
+  cursor: pointer;
+  height: 50px;
+}
+.count{
+  background-color: red;
+  padding:4px 6.5px;
+  color: #fff;
+  float: right;
+  font-size: 8px;
+  margin-right: 120px;
+  border-radius: 50%;
+}
+.fa-solid{
+  text-decoration: none;
+  margin-top: 10px;
+}
