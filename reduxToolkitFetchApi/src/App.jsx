@@ -15,7 +15,7 @@ function App() {
       <div>
         <button onClick={e => dispatch(FetchPosts())}>Get Posts</button>
         
-          <table border={1}>
+          <table border={1} align='center' style={{marginTop:"50px"}}>
            <tbody>
            <tr>
               <th>UserId</th>
@@ -24,7 +24,7 @@ function App() {
             </tr>
            {
               state.data && state.data.map((e) => (
-              <tr>
+              <tr key={e.id}>
                 <td>{e.userId}</td>
                 <td>{e.title}</td>
                 <td>{e.body}</td>
