@@ -1,10 +1,10 @@
 import React from 'react'
 
-function DropDown() {
+function DropDown({setQuery}) {
   return (
     <>
         <div>
-            <select className='region px-10 text-sm py-2 outline-none shadow-sm rounded-md'>
+            <select onChange={(e)=>setQuery(e.target.value.toLowerCase())} className='region px-10 text-sm py-2 outline-none shadow-sm rounded-md'>
                 <option  value="" hidden>Filter By region</option>
                 <option value="Africa">Africa</option>
                 <option value="America">America</option>

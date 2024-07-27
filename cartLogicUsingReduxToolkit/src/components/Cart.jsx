@@ -18,6 +18,7 @@ function Cart() {
             state.map((e, i) => (
                     <div key={i} style={{width:"150px", backgroundColor:"white", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", padding: "50px 10px", margin:"30px 10px"}}>
                     <p className='title'>{e.name}</p>
+                    <p className='title'>{e.id}</p>
                     <p>Rs. {e.price}</p>
                     <button onClick={() => dispatch(removeItem(e.id))}  className='remove-btn'>Remove</button>
 

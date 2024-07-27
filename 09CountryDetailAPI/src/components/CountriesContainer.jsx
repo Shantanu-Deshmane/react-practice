@@ -19,8 +19,11 @@ return (
   <>
   
     {!CounteriesData.length ? (<CardShimmerEffect/>
-    ) : (<div className='flex flex-wrap justify-evenly'>
-      {CounteriesData.filter(country => country.name.common.toLowerCase().includes(query)).map((country)=>{
+    ) : (<div className=' flex flex-wrap justify-evenly'>
+      {CounteriesData.filter(country => country.name.common.toLowerCase().includes(query) || country.region.toLowerCase().includes(query) 
+      
+    )
+      .map((country)=>{
   
       return <CountryCard 
         key={country.name.common}

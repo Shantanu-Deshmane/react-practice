@@ -14,7 +14,7 @@ function Home() {
     <div className={dark ? 'dark' : ''}>
     <div className=' flex justify-between pt-10 px-14'>
     <Search setQuery={setQuery} />
-    <DropDown/>
+    <DropDown setQuery={setQuery}/>
     </div>
     <CountriesContainer query={query}/>
     </div>
