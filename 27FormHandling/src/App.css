@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: sans-serif;
+}
+tr:nth-child(even){
+    background-color: rgba(112, 128, 144, 0.44);
+}
+td,th{
+    padding-left: 10px;
+    font-size: 15px;
+    padding-top: 10px;
+}
