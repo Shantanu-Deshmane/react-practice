@@ -32,7 +32,13 @@ function Table({expense}) {
                }
                 
             </tbody>
-           
+            <thead>
+                <tr>
+                    <th className='text-start border'>Total</th>
+                    <th className='text-start border'></th>
+                    <th className='text-start border'>₹ 10000</th>
+                </tr>
+            </thead>
         </table>
     </div>
   )
