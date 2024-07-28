@@ -7,13 +7,13 @@ import Table from './components/Table'
 import expenseData from "./expensesData";
 
 function App() {
-  const [data, setData] = useState(expenseData)
+  const [data, setData] = useState([])
 
   return (
     <>
       <div className='flex justify-evenly items-center'>
-        <Form/>
-        <Table expense={expenseData}/>
+        <Form setData={setData}/>
+        <Table expense={data}/>
       </div>
     </>
   )
