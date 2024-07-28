@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from "react-redux";
 import { removeItem } from "../redux/CartSlice";
+import { NavLink } from "react-router-dom";
 
 function Cart() {
     const dispatch = useDispatch();
@@ -10,6 +11,7 @@ function Cart() {
     
   return (
     <div>
+        <NavLink to={"/"}>Back</NavLink>
         <h3>{`Products in Cart are: ${state.length}`}</h3>
         <b>{`Total : Rs ${totalPrice} /-`}</b>
 
