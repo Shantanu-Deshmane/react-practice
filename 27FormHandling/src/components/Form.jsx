@@ -1,17 +1,21 @@
 import React, { useState } from 'react'
 
 function Form({setData}) {
-const [title, setTitle] = useState('') 
-const [category, setCategory] = useState('') 
-const [amount, setAmount] = useState('') 
+
+const [expenses, setSetExpenses] = useState({
+    title : '',
+    category : '',
+    amount : '',
+}) 
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const formData = {title, category, amount, id:crypto.randomUUID()}
-        setData((prevState) => [...prevState, formData])
-        setTitle('');
-        setAmount('');
-        setCategory('');
+        setData((prevState) => [...prevState, {...expenses, id:crypto.randomUUID()}])
+        setSetExpenses({
+            title : '',
+            category : '',
+            amount : '',
+        })
     }
 
 
@@ -28,15 +32,16 @@ const [amount, setAmount] = useState('')
                     className='w-full py-1 mb-3 ' 
                     type="text" 
                     name="title" 
-                    value={title} onChange={e => setTitle(e.target.value)} /><br />
+                    value={expenses.title} 
+                    onChange={(e) => setSetExpenses((prev) => ({...prev, title : e.target.value}))} /><br />
 
                     <label className='text-md text-gray-800' htmlFor="">Category</label><br />
                     <select 
                     required 
                     name='category' 
                     className='bg-slate-400 outline-none w-full py-1 mb-3 '
-                    value={category} 
-                    onChange={e => setCategory(e.target.value)}>
+                    value={expenses.category} 
+                    onChange={(e) => setSetExpenses((prev) => ({...prev, category : e.target.value}))}>
                             <option value="" hidden>Select Category</option>
                             <option value="Medecine">Medecine</option>
                             <option value="Grocery" >Grocery</option>
@@ -51,8 +56,8 @@ const [amount, setAmount] = useState('')
                     className='w-full py-1 mb-3' 
                     type="text" 
                     name="amount" 
-                    value={amount} 
-                    onChange={e => setAmount(e.target.value)} />
+                    value={expenses.amount} 
+                    onChange={(e) => setSetExpenses((prev) => ({...prev, amount : e.target.value}))}/>
 
                 <div>
                     <button className='bg-slate-500 text-white w-full py-1 mt-4'>Add</button>
