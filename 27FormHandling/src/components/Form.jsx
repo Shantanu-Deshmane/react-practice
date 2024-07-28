@@ -54,7 +54,7 @@ const [expenses, setSetExpenses] = useState({
                     <input 
                     required 
                     className='w-full py-1 mb-3' 
-                    type="text" 
+                    type="number" 
                     name="amount" 
                     value={expenses.amount} 
                     onChange={(e) => setSetExpenses((prev) => ({...prev, amount : e.target.value}))}/>

@@ -1,7 +1,9 @@
 import React from 'react'
 
 function Table({expense}) {
-    console.log(expense)
+    console.log("exppp",expense)
+    const totalAmount = expense.reduce((a, b) => a+ parseInt(b.amount), 0)
+    console.log(totalAmount)
   return (
     <div className='mx-7 mt-20'>
         <table className='border w-[500px]'>
@@ -36,7 +38,7 @@ function Table({expense}) {
                 <tr>
                     <th className='text-start border'>Total</th>
                     <th className='text-start border'></th>
-                    <th className='text-start border'>₹ 10000</th>
+                    <th className='text-start border'>₹ {totalAmount}</th>
                 </tr>
             </thead>
         </table>
