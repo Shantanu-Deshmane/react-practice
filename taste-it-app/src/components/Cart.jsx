@@ -1,18 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {IoMdClose} from 'react-icons/io'
+import { FaShoppingCart } from "react-icons/fa";
 import CartItem from './CartItem';
-
+import { useSelector } from "react-redux";
 
 function Cart() {
+  const [active, setActive] = useState(true)
+  const cartProducts = useSelector(state => state.cart.cart)
+  
   return (
     <>
-        <div className='cart px-4 py-4 font-semibold fixed top-0 right-0 w-full lg:w-[22vw] h-full overflow-y-scroll scroll-smooth bg-white'>
+        <div className={`cart px-4 py-4 font-semibold fixed top-0 right-0 w-full lg:w-[22vw] h-full overflow-y-auto bg-white ${active ? 'translate-x-0' : 'translate-x-full'}  transition-all duration-500 z-50`}>
             <div className='flex items-center justify-between '>
                 <span>My orders</span>
-                <IoMdClose className='cursor-pointer rounded border border-gray-500 '/>
+                <IoMdClose onClick={e => setActive(!active)} className='cursor-pointer rounded border border-gray-500 '/>
             </div>
 
-            <div className='font-normal fixed bottom-2  h-28 bg-white z-40 '>
+            {
+              cartProducts.map((e) => <CartItem
+                img = {e.img}
+                name = {e.name}
+                price = {e.price}
+                qty = {e.qty}
+                id = {e.id}
+              />)
+            }
+
+            <div className='font-normal fixed top-[80%] bg-white '>
                 <h1 className='font-semibold text-gray-500'>item: </h1>
                 <h1 className='font-semibold text-gray-500'>Total amount: </h1>
                 <hr className='w-[88vw] lg:w-[19vw] my-4' />
@@ -20,34 +34,9 @@ function Cart() {
             </div>
             
             <div>
-            
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
             </div>
-
         </div>
+          <FaShoppingCart onClick={e => setActive(!active)} className='fixed bottom-8 right-4 p-2 text-4xl bg-white rounded-full cursor-pointer'/>
     </>
   )
 }
