@@ -1,6 +1,7 @@
 import React from 'react'
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { MdDelete } from "react-icons/md";
+import { useDispatch } from "react-redux";
 
 function CartItem() {
   return (
