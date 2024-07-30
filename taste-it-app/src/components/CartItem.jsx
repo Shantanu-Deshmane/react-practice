@@ -2,7 +2,7 @@ import React from 'react'
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import { removeItem } from '../redux/CartSlice';
+import { removeItem, increaseQty, decreaseQty } from '../redux/CartSlice';
 
 function CartItem({img, name, price, qty,id }) {
     const dispatch = useDispatch();
@@ -21,9 +21,9 @@ function CartItem({img, name, price, qty,id }) {
                         <span className='text-orange-500 font-bold'>₹{price}</span>
                     </div>
                     <div className='flex gap-2 absolute right-9 text-gray-500'>
-                    <AiOutlinePlus className='border border-gray-500 p-1 text-xl rounded hover:bg-orange-500 hover:text-white hover:border-none transition-all ease-linear cursor-pointer'/>
+                    <AiOutlineMinus onClick={() => qty <= 1 ? dispatch(removeItem(id)) : dispatch(decreaseQty({id}))} className='border border-gray-500 p-1 text-xl rounded hover:bg-orange-500 hover:text-white hover:border-none transition-all ease-linear cursor-pointer'/>
                     <span>{qty}</span>
-                    <AiOutlineMinus className='border border-gray-500 p-1 text-xl rounded hover:bg-orange-500 hover:text-white hover:border-none transition-all ease-linear cursor-pointer'/>
+                    <AiOutlinePlus onClick={() => dispatch(increaseQty({id}))} className='border border-gray-500 p-1 text-xl rounded hover:bg-orange-500 hover:text-white hover:border-none transition-all ease-linear cursor-pointer'/>
                     </div>
                 </div>
             </div>

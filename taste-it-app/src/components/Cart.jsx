@@ -17,14 +17,14 @@ function Cart() {
             </div>
 
             {
-              cartProducts.map((e) => <CartItem
+              cartProducts.length > 0 ? cartProducts.map((e) => <CartItem
                 img = {e.img}
                 name = {e.name}
                 price = {e.price}
                 qty = {e.qty}
                 id = {e.id}
-              />)
-            }
+              />): <h2 className='text-center mt-8'>Oops! Cart is empty</h2>
+            } 
 
             <div className='font-normal fixed top-[80%] bg-white '>
                 <h1 className='font-semibold text-gray-500'>item: </h1>
