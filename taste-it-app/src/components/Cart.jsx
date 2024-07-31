@@ -3,8 +3,10 @@ import { IoMdClose } from 'react-icons/io'
 import { FaShoppingCart } from "react-icons/fa";
 import CartItem from './CartItem';
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
+  const navigate = useNavigate();
   const [active, setActive] = useState(false)
   const cartProducts = useSelector(state => state.cart.cart)
   const totalQty = cartProducts.reduce((totalQty, item) => totalQty + item.qty, 0)
@@ -33,7 +35,7 @@ function Cart() {
           <h1 className='font-semibold text-gray-500'>item: {totalQty} </h1>
           <h1 className='font-semibold text-gray-500'>Total amount: ₹{totalPrice} </h1>
           <hr className='w-[88vw] lg:w-[19vw] my-4' />
-          <button className='bg-orange-500 text-white font-semibold w-[88vw] lg:w-[19vw] py-1 rounded'>Checkout</button>
+          <button onClick={() => navigate("/success")} className='bg-orange-500 text-white font-semibold w-[88vw] lg:w-[19vw] py-1 rounded'>Checkout</button>
         </div>
 
         <div>
