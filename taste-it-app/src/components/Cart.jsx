@@ -25,6 +25,7 @@ function Cart() {
             price={e.price}
             qty={e.qty}
             id={e.id}
+            key={e.id}
           />) : <h2 className='text-center mt-8'>Oops! Cart is empty</h2>
         }
 
