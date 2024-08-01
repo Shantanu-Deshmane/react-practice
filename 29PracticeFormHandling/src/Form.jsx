@@ -3,8 +3,12 @@ import React from 'react'
 function Form() {
   const getFormData = (e) => {
     e.preventDefault()
-    // const FormData = e.target.value
-    console.log(e.target)
+    const data = new FormData(e.target)
+    const formEntry = {}
+    for(let [key, value] of data) {
+      formEntry[key] = value
+    }
+    console.log(formEntry)
   }
   return (
     <>
