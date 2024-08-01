@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Form() {
+function Form({setEntries}) {
   const getFormData = (e) => {
     e.preventDefault()
     const data = new FormData(e.target)
@@ -8,7 +8,7 @@ function Form() {
     for(let [key, value] of data) {
       formEntry[key] = value
     }
-    console.log(formEntry)
+    setEntries(formEntry)
   }
   return (
     <>

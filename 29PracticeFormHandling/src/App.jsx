@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import './App.css'
 import Form from './Form'
+import Display from './Display'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [entries, setEntries] = useState({})
+  console.log("entries ====", entries)
 
   return (
     <>
-     <Form/>
+     <Form setEntries={setEntries}/>
+      <Display entries={entries}/>
     </>
   )
 }
